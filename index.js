@@ -1,3 +1,4 @@
+const advice_texts = document.querySelector("#advice_texts")
 const advice_number = document.querySelector("#advice_number");
 const advice_text = document.querySelector("#advice_text");
 const generate_advice_el = document.querySelector("#generate_advice");
@@ -20,6 +21,15 @@ function update_advice_number(number)
 {
     advice_number.innerText = `ADVICE #${number}`;
 }
+
+function initialize()
+{
+    generate_advice();
+    advice_number.style.animationPlayState = "Running"
+    advice_texts.style.animationPlayState = "Running"
+}
+
+initialize()
 
 function generate_advice()
 {

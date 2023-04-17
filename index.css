@@ -53,6 +53,7 @@ body
     font-size: 0.9rem;
     letter-spacing: 0.4rem;
     margin: 1rem 0;
+    animation: opacityIn 0.5s ease backwards 0.2s paused;
 }
 
 .wrapper .advice 
@@ -61,6 +62,7 @@ body
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
+    animation: opacityIn 0.5s ease backwards 0.2s paused;
 }
 
 .wrapper .advice .quotes 
@@ -130,5 +132,14 @@ body
     {
         opacity: 0;
         transform: translateY(-10%);
+    }
+}
+
+@keyframes opacityOut
+{
+    to
+    {
+        opacity: 0;
+        transform: scale(0.9);
     }
 }
