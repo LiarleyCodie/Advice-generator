@@ -1,0 +1,96 @@
+:root {
+    font-size: 62.5%;
+
+    /* ### Primary */
+
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* ### Neutral */
+
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.4rem;
+    font-family: 'Manrope', sans-serif;
+    background: var(--dark-blue);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.wrapper {
+    background: var(--dark-grayish-blue);
+    padding: 2rem 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1rem;
+    row-gap: 1rem;
+    box-shadow: 0 1rem 3rem -1.5rem rgba(0,0,0,0.3);
+}
+
+.wrapper .advice-number {
+    color: var(--neon-green);
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+    margin: 1rem 0;
+}
+
+.wrapper .advice {
+    color: var(--light-cyan);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wrapper .advice .quotes {
+    font-family: serif;
+}
+
+.wrapper .separator img {
+    width: 100%;
+}
+
+.wrapper .separator {
+    margin: 1rem 0;
+}
+
+.wrapper .generate-button {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    border: none;
+    background: var(--neon-green);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    transition: box-shadow 300ms ease, background 150ms ease, transform 150ms ease;
+    cursor: pointer;
+    transform: translateY(50%);
+}
+
+.wrapper .generate-button:hover {
+    box-shadow: 0 0 3rem var(--neon-green);
+}
+
+.wrapper .generate-button:active {
+    background:hsl(150, 100%, 55%);
+    transform: translateY(50%) scale(0.95);
+}
+
+.wrapper .generate-button img {
+    transform: scale(0.85);
+}
