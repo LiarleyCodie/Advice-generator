@@ -13,13 +13,15 @@
   <link rel="stylesheet" href="index.css">
   
   <title>Frontend Mentor | Advice generator app</title>
+
+  <script src="index.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
-    <p class="advice-number">ADVICE #117</p>
+    <p class="advice-number" id="advice_number">ADVICE #117</p>
     <h2 class="advice">
       <span class="open quotes">"</span>
-      <span class="text">
+      <span class="text" id="advice_text">
         It is easy to sit up and take notice, what's difficult is getting up and taking action.
       </span>
       <span class="close quotes">"</span>
@@ -30,7 +32,7 @@
         <img src="images/pattern-divider-mobile.svg" alt="-- separator --">
       </picture>
     </div>
-    <button class="generate-button">
+    <button class="generate-button" id="generate_advice">
       <img src="images/icon-dice.svg" alt="dice icon" class="dice-icon">
     </button>
   </div>

@@ -1,4 +1,5 @@
-:root {
+:root 
+{
     font-size: 62.5%;
 
     /* ### Primary */
@@ -13,13 +14,15 @@
     --dark-blue: hsl(218, 23%, 16%);
 }
 
-* {
+* 
+{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body 
+{
     min-height: 100vh;
     font-size: 1.4rem;
     font-family: 'Manrope', sans-serif;
@@ -29,7 +32,8 @@ body {
     padding: 1rem;
 }
 
-.wrapper {
+.wrapper 
+{
     background: var(--dark-grayish-blue);
     padding: 2rem 2rem 4rem 2rem;
     display: flex;
@@ -40,35 +44,42 @@ body {
     border-radius: 1rem;
     row-gap: 1rem;
     box-shadow: 0 1rem 3rem -1.5rem rgba(0,0,0,0.3);
+    animation: opacityIn 0.5s ease backwards;
 }
 
-.wrapper .advice-number {
+.wrapper .advice-number 
+{
     color: var(--neon-green);
     font-size: 0.9rem;
     letter-spacing: 0.4rem;
     margin: 1rem 0;
 }
 
-.wrapper .advice {
+.wrapper .advice 
+{
     color: var(--light-cyan);
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
 }
 
-.wrapper .advice .quotes {
+.wrapper .advice .quotes 
+{
     font-family: serif;
 }
 
-.wrapper .separator img {
+.wrapper .separator img 
+{
     width: 100%;
 }
 
-.wrapper .separator {
+.wrapper .separator 
+{
     margin: 1rem 0;
 }
 
-.wrapper .generate-button {
+.wrapper .generate-button 
+{
     display: grid;
     place-items: center;
     padding: 1.5rem;
@@ -82,15 +93,42 @@ body {
     transform: translateY(50%);
 }
 
-.wrapper .generate-button:hover {
+.wrapper .generate-button:hover 
+{
     box-shadow: 0 0 3rem var(--neon-green);
 }
 
-.wrapper .generate-button:active {
+.wrapper .generate-button:active 
+{
     background:hsl(150, 100%, 55%);
     transform: translateY(50%) scale(0.95);
 }
 
-.wrapper .generate-button img {
+.wrapper .generate-button img 
+{
     transform: scale(0.85);
+}
+
+@media screen and (min-width: 475px)
+{
+    .wrapper 
+    {
+        padding: 3rem 3rem 4rem 3rem;
+        width: 100%;
+        max-width: 38rem;
+    }
+
+    .wrapper .advice-number 
+    {
+        font-size: 1rem;
+    }
+}
+
+@keyframes opacityIn
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
 }
